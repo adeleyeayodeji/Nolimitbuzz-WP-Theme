@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "main-sections.css",
+	"sources": [
+		"../sass/custom/main-sections.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
