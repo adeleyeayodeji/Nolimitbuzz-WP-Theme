@@ -53,27 +53,29 @@ get_header();
         $first_post->post_content = wp_trim_words($first_post->post_content, 20);
     ?>
         <section class="no-limit-buzz--site-main-section-2">
-            <div class="no-limit-buzz--site-main-section-2-container">
-                <div class="no-limit-buzz--site-main-section-2-left">
-                    <div class="no-limit-buzz--site-main-section-2-left-title">
-                        <h3><?php echo esc_html($first_post->post_title); ?></h3>
-                        <p>
-                            <?php echo esc_html($first_post->post_content); ?>
-                        </p>
+            <a href="<?php echo esc_url(get_permalink($first_post->ID)); ?>" style="text-decoration: none;">
+                <div class="no-limit-buzz--site-main-section-2-container">
+                    <div class="no-limit-buzz--site-main-section-2-left">
+                        <div class="no-limit-buzz--site-main-section-2-left-title">
+                            <h3><?php echo esc_html($first_post->post_title); ?></h3>
+                            <p>
+                                <?php echo esc_html($first_post->post_content); ?>
+                            </p>
+                        </div>
+                        <div class="no-limit-buzz--site-main-section-2-left-date">
+                            <span>
+                                <?php echo esc_html($first_post->post_date); ?>
+                            </span>
+                            <a href="<?php echo esc_url(get_permalink($first_post->ID)); ?>">
+                                Read more
+                            </a>
+                        </div>
                     </div>
-                    <div class="no-limit-buzz--site-main-section-2-left-date">
-                        <span>
-                            <?php echo esc_html($first_post->post_date); ?>
-                        </span>
-                        <a href="<?php echo esc_url(get_permalink($first_post->ID)); ?>">
-                            Read more
-                        </a>
+                    <div class="no-limit-buzz--site-main-section-2-right" style="background-image: url('<?php echo get_the_post_thumbnail_url($first_post->ID); ?>');">
+                        <!-- silent is golden -->
                     </div>
                 </div>
-                <div class="no-limit-buzz--site-main-section-2-right" style="background-image: url('<?php echo get_the_post_thumbnail_url($first_post->ID); ?>');">
-                    <!-- silent is golden -->
-                </div>
-            </div>
+            </a>
         </section>
 
         <section class="no-limit-buzz--site-main-section-3">
@@ -88,7 +90,7 @@ get_header();
                     //shorten the post content and trim
                     $post->post_content = wp_trim_words($post->post_content, 15);
                 ?>
-                    <div class="no-limit-buzz--site-main-section-3-blog">
+                    <div class="no-limit-buzz--site-main-section-3-blog" onclick="window.location.href = '<?php echo esc_url(get_permalink($post->ID)); ?>'">
                         <div class="no-limit-buzz--site-main-section-3-blog-image">
                             <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="Blog image">
                         </div>

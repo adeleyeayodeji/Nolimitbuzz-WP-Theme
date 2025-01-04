@@ -17,4 +17,14 @@
       alert("feature not implemented yet!");
     });
   });
+
+  //get all .no-limit-buzz--post-footer-button
+  const postFooterButtons = document.querySelector(
+    ".no-limit-buzz--post-footer-button"
+  );
+  postFooterButtons.addEventListener("click", function (event) {
+    event.preventDefault();
+    //show alert
+    alert("feature not implemented yet!");
+  });
 })();
