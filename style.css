@@ -1608,4 +1608,20 @@ textarea {
 	fill: #000000;
 }
 
+.error-404 {
+	text-align: center;
+	padding: 50px;
+	background-color: #f8f9fa;
+}
+
+.error-404 .page-title {
+	font-size: 2em;
+	color: #333;
+}
+
+.error-404 .page-content p {
+	font-size: 1.2em;
+	color: #666;
+}
+
 /*# sourceMappingURL=style.css.map */
