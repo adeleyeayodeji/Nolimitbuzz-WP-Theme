@@ -28,7 +28,9 @@
 		<header class="no-limit-buzz--site-header">
 			<div class="no-limit-buzz--site-branding">
 				<div class="no-limit-buzz--site-branding-logo">
-					<img src="<?php echo THEME_ASSETS_URI; ?>/img/logo.svg" alt="No Limit Buzz Logo">
+					<a href="<?php echo esc_url(home_url('/')); ?>">
+						<img src="<?php echo THEME_ASSETS_URI; ?>/img/logo.svg?v=<?php echo time(); ?>" alt="No Limit Buzz Logo">
+					</a>
 				</div>
 				<div class="no-limit-buzz--site-branding-search">
 					<img src="<?php echo THEME_ASSETS_URI; ?>/img/search-icon.svg" alt="No Limit Buzz Logo">
